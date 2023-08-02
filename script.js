@@ -89,6 +89,8 @@ function makeMove(index) {
 
                 setTimeout(() => { document.getElementsByClassName("confetti")[0].innerHTML = "" }, 4000)
             }
+            currentPlayer =
+            currentPlayer === humanPlayer ? aiPlayer : humanPlayer;
             gameOver = true;
             return;
         }
