@@ -42,6 +42,7 @@ for (let j = 0; j < menu.length; j++) {
     menu[j].addEventListener("click", function () {
         if (this.innerHTML === "Start") {
             document.getElementsByClassName('hero1')[0].style.display = "block"
+            currentPlayer = humanPlayer;
 
         } else if (this.innerHTML === "Exit") {
             document.getElementsByClassName('hero1')[0].style.display = "none"
@@ -49,12 +50,14 @@ for (let j = 0; j < menu.length; j++) {
                 col[i].innerHTML = ""
                 gameBoard[i] = ""
                 winnerTitle[0].innerHTML = ""
+                currentPlayer = humanPlayer;
             }
         } else if (this.innerHTML === "Clear") {
             for (let i = 0; i < col.length; i++) {
                 col[i].innerHTML = ""
                 gameBoard[i] = ""
                 winnerTitle[0].innerHTML = ""
+                currentPlayer = humanPlayer;
             }
         }
     })
